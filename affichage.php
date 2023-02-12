@@ -26,23 +26,6 @@
                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                     }
                 }
-                if(isset($_POST['delete'])) {
-                    $sql = "DELETE FROM annonce WHERE Identifiant = 1";
-                    if (mysqli_query($conn, $sql)) {
-                        echo "New record created successfully";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
-                }
-                if(isset($_POST['update'])) {
-                    $sql = "UPDATE annonce SET Titre = 'test' WHERE Identifiant = 1";
-                    if (mysqli_query($conn, $sql)) {
-                        echo "New record created successfully";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
-                }
-
                 
             ?>
 <!DOCTYPE html>
@@ -82,12 +65,6 @@
                     <input type="text" name="montant" placeholder="Montant">
                     <input type="text" name="type_annonce" placeholder="Type_annonce">
                     <input action="./index.php" type="submit" name="submit" value="submit">  
-                    <input type="submit" name="delete" value="delete">
-                    <input type="submit" name="update" value="update">
-                    <li class="nav-item">
-                                <a href="ajout.php" type"button" class="btn btn-outline-light"> + Ajouter une
-                                    Annonce</a>
-                    </li>
                 </form>
                 
           </div>
